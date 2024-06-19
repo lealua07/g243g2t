@@ -1,0 +1,59 @@
+@import url(reset.css);
+:root{
+    --cor-fundo-barra: rgb(255, 0, 0);
+}
+.barra{
+    width: 100vw;
+}
+.barra_conteudo{
+    background-color: var(--cor-fundo-barra);
+    width: 100vw;
+    height: 70px;
+    color: lightpink;
+    box-shadow: 3px 5px 5px lightpink;
+}
+.barra_info{
+    display: flex;
+    width: 50vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+.campoInput{
+    width: 200px;
+    height: 30px;
+    position: relative;
+    margin: 3rem 0;
+}
+.campoInput input{
+    position: absolute;
+    inset: 0;
+    background-color: transparent;
+    padding: 0 1rem; /*rem é uma medida para tamanho responsivo*/
+    font-size: 1rem;
+    outline: none;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: .5rem;
+    color: rgb(255, 0, 0);
+}
+.campoInput label {
+    position: relative;
+    top: 30%;
+    left: 1rem;
+    transform: translateY(-30%);
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    pointer-events: none;
+    padding: 0 .3rem;
+    background-color: var(--cor-fundo-barra);
+    transition: 200ms ease-in-out top,
+                200ms ease-in-out font-size,
+                200ms ease-in-out color;
+}
+.campoInput input:focus + label , 
+.campoInput input:valid + label {
+    top: -10px;
+    font-size: .8rem;
+    color: black;
+}
